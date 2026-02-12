@@ -1,0 +1,65 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Variables de entorno
+.env
+.env.*
+
+# Archivos de configuración locales
+instance/
+.webassets-cache
+
+# Base de datos
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.swp
+*.swo
+*~
+*.tmp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Archivos de migraciones (opcional)
+# migrations/
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+
+# Archivos estáticos generados
+staticfiles/
+
+# Jupyter Notebook
+.ipynb_checkpoints
