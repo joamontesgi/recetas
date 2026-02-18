@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Coverage / testing
+coverage/
+
+# Build folders
+dist/
+build/
+
+# Temporary files
+.tmp/
+.temp/
+
+serviceAccountKey.json
