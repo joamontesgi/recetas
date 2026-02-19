@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+
+# Variables de entorno
+.env
+.env.*
+
+# Archivos de Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos de medios y estáticos
+media/
+staticfiles/
+
+# Archivos de migración (opcional, si no quieres versionarlos)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Archivos de configuración local
+local_settings.py
+
+# Archivos de IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Coverage / testing
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Archivos de pytest
+.pytest_cache/
+
+# Archivos de mypy
+.mypy_cache/
+
+# Archivos de Ruff / linters
+.ruff_cache/
+
+# Logs
+logs/
+*.log
+
+# Docker (si usas)
+*.pid
+*.seed
+*.pid.lock
+
+# Archivos temporales
+tmp/
+temp/
+
+# Archivos de compilación
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Archivos de pip
+pip-log.txt
+pip-delete-this-directory.txt
