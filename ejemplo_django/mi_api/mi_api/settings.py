@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'mi_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
+        'NAME': 'django',
+        'USER': 'root',
         'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

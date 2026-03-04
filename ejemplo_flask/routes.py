@@ -1,8 +1,23 @@
 from flask import jsonify, request, current_app
 from models import User, Post, db
+from functools import wraps
+
+
+TOKEN_SECRETO = "miclave123"
+
+def require_token(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.headers.get("Authorization")
+        if token != f"Token {TOKEN_SECRETO}":
+            return jsonify({"error": "No autorizado"}), 401
+        return f(*args, **kwargs)
+    return decorated
+
 
 def register_routes(app):
     @app.route('/api/users', methods=['GET'])
+    @require_token
     def get_users():
         users = User.query.all()
         return jsonify([

@@ -2,10 +2,18 @@ const express = require("express");
 const db = require("./firebase");
 
 const app = express();
-
 app.use(express.json());
 
-app.post("/users", function (req, res) {
+const TOKEN_SECRETO = "miclave123";
+function requireToken(req, res, next) {
+    const token = req.headers["Authorization"];
+    if (token !== `Token ${TOKEN_SECRETO}`) {
+        return res.status(403).json({ error: "No autorizado" });
+    }
+    next();
+}
+
+app.post("/users", requireToken, function (req, res) {    
     const ref = db.ref("users").push();
     ref.set({
         name: req.body.name,
@@ -16,7 +24,7 @@ app.post("/users", function (req, res) {
     });
 });
 
-app.get("/users", function (_, res) {
+app.get("/users", requireToken, function (_, res) {    
     db.ref("users").once("value").then(function (snap) {
         const data = snap.val();
         const users = [];
